@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: eureka-test-client  # Name of the service, which will be used for registration in Eureka
+
+  cloud:
+    discovery:
+      enabled: true  # Enables service discovery
+
+eureka:
+    client:
+      serviceUrl:
+        defaultZone: https://ws.00818283.xyz/eureka-server/eureka/  # URL of the Eureka Server
+      register-with-eureka: true  # Register this service with Eureka
+      fetch-registry: true        # Fetch registry from Eureka
+    instance:
+      prefer-ip-address: true   # Use IP address instead of hostname
+      hostname: localhost       # The hostname of the instance
+
+
+server:
+    port: 7581  # Port on which the client service will run
+
